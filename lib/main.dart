@@ -47,13 +47,21 @@ class _MyHomePageState extends State<MyHomePage> {
           child: SfCartesianChart(
         primaryXAxis: CategoryAxis(plotBands: <PlotBand>[
           PlotBand(
-              start: 7, end: 7, borderWidth: 2, dashArray: const <double>[4, 5])
+              start: 7,
+              end: 7,
+              borderWidth: 2,
+              borderColor: Colors.black,
+              dashArray: const <double>[4, 5])
         ]),
         primaryYAxis: NumericAxis(plotBands: <PlotBand>[
           PlotBand(
-              start: 36, end: 36, borderWidth: 2, dashArray: const <double>[4, 5])
+              start: 36,
+              end: 36,
+              borderWidth: 2,
+              borderColor: Colors.black,
+              dashArray: const <double>[4, 5])
         ]),
-        series: <ChartSeries<ChartSampleData, String>>[
+        series: <CartesianSeries<ChartSampleData, String>>[
           LineSeries<ChartSampleData, String>(
               dataSource: chartData,
               xValueMapper: (ChartSampleData data, _) => data.x,
